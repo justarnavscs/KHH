@@ -150,20 +150,82 @@
   100% { opacity: 0; pointer-events: none; display: none; }
 }
 
-.bg-watermark {
+/* Brand animations */
+.brand-coin {
+  position: relative;
+  flex: 0 0 auto;
+  perspective: 900px;
+  isolation: isolate;
+}
+.brand-coin__spin {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  animation: brand-coin-spin 8s linear infinite;
+}
+.brand-coin__face,
+.brand-coin__edge {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+}
+.brand-coin__face {
+  overflow: hidden;
+  border: 3px solid #b89b72;
+  background: #d7bd96;
+  backface-visibility: hidden;
+  box-shadow: inset 0 0 0 2px rgb(255 255 255 / 0.35), inset 0 -8px 14px rgb(85 53 24 / 0.2);
+}
+.brand-coin__face::after {
+  position: absolute;
+  inset: 8%;
+  border: 1px solid rgb(255 248 231 / 0.55);
+  border-radius: 50%;
+  content: '';
+}
+.brand-coin__face img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: sepia(.22) saturate(.8) contrast(1.05);
+}
+.brand-coin__face--back {
+  transform: rotateY(180deg);
+}
+.brand-coin__edge {
+  inset: 2%;
+  transform: translateZ(-3px);
+  border: 4px solid #9a7548;
+  background: repeating-linear-gradient(90deg, #c8a572 0 3px, #8c653a 3px 5px);
+  box-shadow: 0 5px 10px rgb(52 33 15 / 0.2);
+}
+@keyframes brand-coin-spin {
+  from { transform: rotateY(0deg) rotateZ(-2deg); }
+  to { transform: rotateY(360deg) rotateZ(-2deg); }
+}
+
+.brand-watermark {
   position: fixed;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  z-index: 0;
   width: 85vw;
   height: 85vw;
   max-width: 580px;
   max-height: 580px;
   background: url('/logo.png') center / contain no-repeat;
-  opacity: 0.08;
+  opacity: 0.045;
   pointer-events: none;
-  z-index: 11;
   filter: contrast(0.95) saturate(0.85);
+  transform: translate(-50%, -50%);
+  animation: brand-watermark-drift 24s ease-in-out infinite;
+  will-change: transform, opacity;
+}
+@keyframes brand-watermark-drift {
+  0%, 100% { transform: translate(-50%, -50%) rotate(-5deg) scale(.96); opacity: .035; }
+  50% { transform: translate(-50%, -51%) rotate(5deg) scale(1.04); opacity: .055; }
 }
 
 .language-overlay {
@@ -186,4 +248,6 @@ section[id] { scroll-margin-top: 6rem; }
     transition-duration: .01ms !important;
   }
   .intro-overlay { display: none; }
+  .brand-coin__spin,
+  .brand-watermark { animation: none; }
 }
