@@ -4,7 +4,7 @@ import {
   ArrowUpRight, Code2, ShieldCheck, BookOpen, Lightbulb,
   Terminal, GraduationCap, PenLine, Cpu, Layers3, Menu, X
 } from 'lucide-react';
-import { BrandWatermark, SpinningCoin } from './components/BrandAnimations';
+import { BrandWatermark, SpinningCoin, StartupIntro } from './components/BrandAnimations';
 
 const skills = [
   { icon: Code2, title: 'Programming & Development', text: 'Building useful digital experiences, experimenting with code, and turning ideas into working projects.' },
@@ -24,6 +24,7 @@ export default function App() {
 
   return (
     <div className="min-h-screen bg-[#f5f3ef] text-[#20201f] selection:bg-[#b89b72]/30">
+      <StartupIntro />
       <BrandWatermark />
       <header className="sticky top-0 z-50 border-b border-black/10 bg-[#f5f3ef]/90 backdrop-blur-xl">
         <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-6">
