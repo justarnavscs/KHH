@@ -44,7 +44,7 @@ export default function App() {
           <div className="mx-auto grid min-h-[680px] max-w-7xl items-center gap-14 px-6 py-24 lg:grid-cols-[1.3fr_.7fr]">
             <motion.div initial={{opacity:0,y:24}} animate={{opacity:1,y:0}} transition={{duration:.7}}>
               <p className="mb-7 inline-flex items-center gap-2 rounded-full border border-[#b89b72]/50 bg-white/60 px-4 py-2 text-[11px] font-bold uppercase tracking-[.22em] text-[#806342]">
-                <span className="h-2 w-2 rounded-full bg-[#9b805e]" /> Student • Entrepreneur • Creator
+                <span className="h-2 w-2 rounded-full bg-[#9b805e]" /> Student • Entrepreneur • Programmer • Writer
               </p>
               <h1 className="max-w-4xl text-5xl font-black leading-[1.04] tracking-[-.055em] sm:text-6xl lg:text-7xl">
                 I’m Arnav Agarwal<span className="text-[#a88a65]">.</span><br />
@@ -52,7 +52,7 @@ export default function App() {
                 Builder by choice.
               </h1>
               <p className="mt-8 max-w-2xl text-lg leading-8 text-[#68645e]">
-                A student with an entrepreneurial mindset, a passion for programming and cybersecurity, and a love for writing eBooks. I explore ideas, learn deeply, and turn curiosity into things people can use.
+                I’m Arnav Agarwal — a student, aspiring entrepreneur, programmer, cybersecurity enthusiast, and eBook writer. This is my personal portfolio: a space for my ideas, experiments, projects, and the skills I’m building.
               </p>
               <div className="mt-10 flex flex-wrap gap-4">
                 <a href="#work" className="inline-flex items-center gap-3 rounded-full bg-[#252421] px-7 py-4 text-sm font-bold text-white transition hover:bg-[#98764e]">Explore my work <ArrowUpRight size={17}/></a>
@@ -79,9 +79,9 @@ export default function App() {
               <h2 className="mt-5 text-4xl font-black tracking-tight sm:text-5xl">A student.<br/>A maker.<br/><span className="font-serif font-medium italic text-[#98764e]">A work in progress.</span></h2>
             </div>
             <div className="max-w-3xl space-y-6 text-lg leading-8 text-[#68645e]">
-              <p>I’m Arnav Agarwal, a student who enjoys looking beyond the classroom to understand how technology, ideas, and businesses work in the real world.</p>
-              <p>My interests bring together programming, cybersecurity, entrepreneurship, and writing. I enjoy creating, documenting what I learn, and approaching challenges with both creativity and logic.</p>
-              <p>This space is my evolving portfolio — a place to share what I’m learning, what I’m building, and the ideas I want to explore next.</p>
+              <p>I’m Arnav Agarwal. I’m curious about how technology works, how businesses grow, and how thoughtful ideas become useful products. I use this portfolio to document my journey as I learn and build.</p>
+              <p>My interests span software development, cybersecurity, entrepreneurship, and eBook writing. I enjoy solving problems, exploring new tools, researching unfamiliar subjects, and turning what I learn into practical work.</p>
+              <p>This is my personal portfolio — not a business or clinic website. It brings together my interests, learning journey, creative work, and future projects.</p>
             </div>
           </div>
         </section>
@@ -91,7 +91,7 @@ export default function App() {
             <p className="text-xs font-bold uppercase tracking-[.25em] text-[#98764e]">02 / Areas of interest</p>
             <div className="mt-5 flex flex-col justify-between gap-6 md:flex-row md:items-end">
               <h2 className="max-w-2xl text-4xl font-black tracking-tight sm:text-5xl">Different disciplines.<br/><span className="font-serif font-medium italic text-[#98764e]">One curious mind.</span></h2>
-              <p className="max-w-sm text-sm leading-7 text-[#68645e]">I’m continually developing my skills through study, experimentation, and hands-on projects.</p>
+              <p className="max-w-sm text-sm leading-7 text-[#68645e]">A snapshot of the fields I’m exploring and developing through learning, practice, and independent projects.</p>
             </div>
             <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
               {skills.map(({icon:Icon,title,text},i)=>(
@@ -141,7 +141,7 @@ export default function App() {
           <div className="rounded-[2rem] border border-[#b89b72]/40 bg-gradient-to-br from-white to-[#e9dfd1] p-9 sm:p-16">
             <p className="text-xs font-bold uppercase tracking-[.25em] text-[#98764e]">04 / Connect</p>
             <h2 className="mt-5 max-w-3xl text-4xl font-black tracking-tight sm:text-6xl">Have an idea?<br/><span className="font-serif font-medium italic text-[#98764e]">Let’s make it real.</span></h2>
-            <p className="mt-6 max-w-xl text-base leading-8 text-[#68645e]">I’m always interested in technology, creative projects, thoughtful collaboration, and opportunities to learn.</p>
+            <p className="mt-6 max-w-xl text-base leading-8 text-[#68645e]">For conversations about technology, programming, creative ideas, projects, or collaboration, connect with me through GitHub.</p>
             <a href="https://github.com/justarnavscs" target="_blank" rel="noreferrer" className="mt-9 inline-flex items-center gap-3 rounded-full bg-[#252421] px-7 py-4 text-sm font-bold text-white transition hover:bg-[#98764e]"><Github size={18}/> Find me on GitHub <ArrowUpRight size={16}/></a>
           </div>
         </section>
