@@ -1,4 +1,4 @@
-const CACHE = 'khh-v1'
+const CACHE = 'studio-arnx-v2'
 const SHELL = ['/', '/index.html', '/manifest.webmanifest', '/icons/icon-192.png']
 
 self.addEventListener('install', (e) => {
@@ -23,8 +23,8 @@ self.addEventListener('fetch', (e) => {
     e.respondWith(fetch(request).catch(() => caches.match('/index.html')))
     return
   }
-  e.respondWith(
-    caches.match(request).then((hit) => {
+  // Always fetch logo/brand assets from the network first so updated files replace old cached logos.
+  if (/\\/(logo\\.(png|jpg)|favicon[^/]*|apple-touch-icon\\.png)$/i.test(url.pathname)) {\n    e.respondWith(fetch(request).then((res) => {\n      if (res.ok) caches.open(CACHE).then((c) => c.put(request, res.clone()))\n      return res\n    }).catch(() => caches.match(request)))\n    return\n  }\n\n  e.respondWith(\n    caches.match(request).then((hit) => {
       const fresh = fetch(request)
         .then((res) => {
           if (res.ok) caches.open(CACHE).then((c) => c.put(request, res.clone()))
