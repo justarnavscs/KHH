@@ -1,4 +1,4 @@
-# Kanchan Homoeo Hall
+# The Studio ArnX
 
 Booking and ordering site for the clinic at Pyada Toli, Upper Bazar, Ranchi. Patients book appointments, place retail orders, or send a bulk inquiry. Staff work from the admin dashboard; records go to Google Sheets and confirmations go out on WhatsApp.
 
