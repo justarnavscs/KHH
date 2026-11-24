@@ -21,13 +21,7 @@ export function BrandWatermark() {
 }
 
 export function StartupIntro() {
-  const [visible, setVisible] = useState(() => {
-    try {
-      return window.sessionStorage.getItem('arnx-startup-seen') !== 'true';
-    } catch {
-      return true;
-    }
-  });
+  const [visible, setVisible] = useState(true);
 
   useEffect(() => {
     if (!visible) return undefined;
@@ -35,14 +29,7 @@ export function StartupIntro() {
     const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     const duration = reducedMotion ? 350 : 3100;
 
-    const dismiss = () => {
-      try {
-        window.sessionStorage.setItem('arnx-startup-seen', 'true');
-      } catch {
-        // The intro can still complete when storage is unavailable.
-      }
-      setVisible(false);
-    };
+    const dismiss = () => setVisible(false);
 
     const timer = window.setTimeout(dismiss, duration);
     const handleKeyDown = (event) => {
@@ -58,14 +45,7 @@ export function StartupIntro() {
 
   if (!visible) return null;
 
-  const skipIntro = () => {
-    try {
-      window.sessionStorage.setItem('arnx-startup-seen', 'true');
-    } catch {
-      // Session storage is optional.
-    }
-    setVisible(false);
-  };
+  const skipIntro = () => setVisible(false);
 
   return (
     <div className="startup-intro" role="dialog" aria-label="The Studio ArnX brand introduction" aria-modal="true">
