@@ -1,28 +1,27 @@
-# The Studio ArnX
+# The Studio ArnX — Arnav Agarwal's Portfolio
 
-Booking and ordering site for the clinic at Pyada Toli, Upper Bazar, Ranchi. Patients book appointments, place retail orders, or send a bulk inquiry. Staff work from the admin dashboard; records go to Google Sheets and confirmations go out on WhatsApp.
+A personal portfolio for Arnav Agarwal, a student with interests in entrepreneurship, programming, cybersecurity, and eBook writing.
 
-## Stack
+## Run locally
 
-Vite, React 19, Tailwind 4, Framer Motion, Firebase client SDK. Serverless functions in `api/` handle Sheets reads and writes, delivery price estimates, notifications and the WhatsApp relay. `whatsapp-bridge/` is a separate Node service and deploys on its own.
-
-## Run it
-
-```
+```bash
 npm install
-cp .env.example .env
 npm run dev
 ```
 
-Fill `.env` before the first run. Nothing talks to Firebase without it.
+## Build
 
-## Ship it
+```bash
+npm run build
+npm run preview
+```
 
-Push to Vercel. `api/` becomes functions, `vercel.json` carries the config. Deploy `whatsapp-bridge/` separately (its README has the steps) and point `VITE_WHATSAPP_BRIDGE_URL` at it.
+## Project structure
 
-## Where things live
+- `src/App.jsx`: portfolio homepage and sections
+- `src/index.css`: global styling
+- `public/`: brand assets, icons, and web app manifest
 
-- `src/App.jsx`: shell, home view, footer
-- `src/components/`: BookingCalendar, RetailForm, BulkForm, MyBookings, AdminDashboard
-- `src/utils/translations.js`: English and Hindi strings
-- `src/index.css`: palette, corner radii, buttons, panels
+## About
+
+The portfolio presents Arnav's learning journey, interests, and work in progress. It is intentionally written as a student portfolio; it does not claim professional certifications, employment history, or publications that have not been supplied.
