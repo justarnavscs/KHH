@@ -1,9 +1,9 @@
 export const translations = {
   en: {
     seo: {
-      bookingsTitle: "My Bookings | Kanchan Homoeo Hall Ranchi",
+      bookingsTitle: "My Bookings | The Studio ArnX Ranchi",
       bookingsDesc: "Look up your consultation slot or reprint your slip. Use the phone number you booked with.",
-      mainTitle: "Kanchan Homoeo Hall, Ranchi | Homoeopathy Clinic and Wholesale Counter",
+      mainTitle: "The Studio ArnX, Ranchi | Homoeopathy Clinic and Wholesale Counter",
       mainDesc: "Homoeopathic clinic and wholesale counter near Mahabir Chowk, Pyada Toli, Upper Bazar, Ranchi. Book a consultation, order medicines for delivery, or ask for a bulk quote. Open Monday to Saturday, 10:30 AM to 8:00 PM."
     },
     nav: {
@@ -45,7 +45,7 @@ export const translations = {
       badge: "The owner",
       title: "Mr. Rahul Kumar",
       subtitle: "Owner and proprietor",
-      p1: "Kanchan Homoeo Hall has stocked homoeopathic remedies for Ranchi since 1995. The counter carries natural formulations from SBL, Dr. Reckeweg and Adel, and the clinic runs consultation sessions alongside it.",
+      p1: "The Studio ArnX has stocked homoeopathic remedies for Ranchi since 1995. The counter carries natural formulations from SBL, Dr. Reckeweg and Adel, and the clinic runs consultation sessions alongside it.",
       p2: "Consulting doctors trained in clinical diagnostics and root-cause homoeopathic therapy see patients at the clinic. Medicines from SBL, Dr. Reckeweg and Adel are stocked on site.",
       legacyTitle: "Since 1995",
       legacyText: "In homoeopathy since 1995",
@@ -97,10 +97,10 @@ export const translations = {
       hotline: "Phone",
       emailUs: "Email",
       addressTitle: "Address",
-      addressText: "Kanchan Homoeo Hall, Near Mahabir Chowk, PyadaToli, Upper Bazar, Ranchi, Jharkhand 834001"
+      addressText: "The Studio ArnX, Near Mahabir Chowk, PyadaToli, Upper Bazar, Ranchi, Jharkhand 834001"
     },
     footer: {
-      rights: "© {year} Kanchan Homoeo Hall, Ranchi",
+      rights: "© {year} The Studio ArnX, Ranchi",
       contact: "Contact"
     },
     forms: {
@@ -209,7 +209,7 @@ export const translations = {
       slipTitle: "APPOINTMENT SLIP",
       token: "TOKEN NUMBER",
       clinic: "CLINIC NAME",
-      clinicVal: "KANCHAN HOMOEO HALL, RANCHI",
+      clinicVal: "The Studio ArnX, RANCHI",
       patient: "PATIENT",
       date: "APPOINTMENT DATE",
       slot: "SCHEDULED TIME",
@@ -291,10 +291,10 @@ export const translations = {
   },
   hi: {
     seo: {
-      bookingsTitle: "पुष्टि किए गए अपॉइंटमेंट और पर्चियां | कंचन होम्योपैथी हॉल रांची",
-      bookingsDesc: "कंचन होम्योपैथी हॉल रांची में अपने निर्धारित डॉक्टर परामर्श की जांच करें, ट्रैक करें या सत्यापित करें। अपने फोन नंबर का उपयोग करके आसानी से स्थिति की जांच करें।",
-      mainTitle: "कंचन होम्योपैथी हॉल | रांची में विश्वसनीय होम्योपैथिक उपचार और थोक दवाएं",
-      mainDesc: "कंचन होम्योपैथी हॉल — रांची, झारखंड में विश्वसनीय समग्र स्वास्थ्य सेवा। सुरक्षित, सौम्य और प्रभावी होम्योपैथिक उपचार, प्रीमियम प्राकृतिक दवाओं, थोक दवा वितरण और समर्पित मरीज सहायता में विशेषज्ञता।"
+      bookingsTitle: "पुष्टि किए गए अपॉइंटमेंट और पर्चियां | द स्टूडियो आर्नएक्स रांची",
+      bookingsDesc: "द स्टूडियो आर्नएक्स रांची में अपने निर्धारित डॉक्टर परामर्श की जांच करें, ट्रैक करें या सत्यापित करें। अपने फोन नंबर का उपयोग करके आसानी से स्थिति की जांच करें।",
+      mainTitle: "द स्टूडियो आर्नएक्स | रांची में विश्वसनीय होम्योपैथिक उपचार और थोक दवाएं",
+      mainDesc: "द स्टूडियो आर्नएक्स — रांची, झारखंड में विश्वसनीय समग्र स्वास्थ्य सेवा। सुरक्षित, सौम्य और प्रभावी होम्योपैथिक उपचार, प्रीमियम प्राकृतिक दवाओं, थोक दवा वितरण और समर्पित मरीज सहायता में विशेषज्ञता।"
     },
     nav: {
       home: "मुख्य",
@@ -320,8 +320,8 @@ export const translations = {
       wholesaleBtn: "थोक पोर्टल"
     },
     about: {
-      title: "कंचन होम्योपैथी हॉल के बारे में",
-      text: "कंचन होम्योपैथी हॉल एक प्रमुख होम्योपैथिक फार्मेसी और क्लिनिक है जो बीमारी के मूल कारण को ठीक करने के लिए समर्पित है। महावीर चौक के पास स्थित, हम उत्कृष्ट गुणवत्ता वाली प्राकृतिक दवाओं और डाइल्यूशन का एक व्यापक स्टॉक रखते हैं। हम हर मरीज के लिए व्यक्तिगत उपचार सुनिश्चित करने के लिए वर्षों की विश्वसनीय सामुदायिक सेवा को समर्पित दोपहर के परामर्श सत्रों के साथ जोड़ते हैं।"
+      title: "द स्टूडियो आर्नएक्स के बारे में",
+      text: "द स्टूडियो आर्नएक्स एक प्रमुख होम्योपैथिक फार्मेसी और क्लिनिक है जो बीमारी के मूल कारण को ठीक करने के लिए समर्पित है। महावीर चौक के पास स्थित, हम उत्कृष्ट गुणवत्ता वाली प्राकृतिक दवाओं और डाइल्यूशन का एक व्यापक स्टॉक रखते हैं। हम हर मरीज के लिए व्यक्तिगत उपचार सुनिश्चित करने के लिए वर्षों की विश्वसनीय सामुदायिक सेवा को समर्पित दोपहर के परामर्श सत्रों के साथ जोड़ते हैं।"
     },
     credibility: {
       certTitle: "लाइसेंस प्राप्त प्रीमियम दवाएं",
@@ -335,7 +335,7 @@ export const translations = {
       badge: "संचालक से मिलें",
       title: "श्री राहुल कुमार",
       subtitle: "मालिक और प्रोपराइटर",
-      p1: "कंचन होम्योपैथी हॉल में आपका स्वागत है। 1995 से, हमारा संकल्प रांची के समुदाय को प्रामाणिक, सौम्य और उच्च गुणवत्ता वाले होम्योपैथिक उपचार प्रदान करना रहा है। हम बेहतरीन प्राकृतिक दवाओं तक पहुंच प्रदान करने और आपके व्यक्तिगत स्वास्थ्य यात्रा का समर्थन करने के लिए विशेषज्ञ परामर्श सत्रों की मेजबानी करने में विश्वास करते हैं।",
+      p1: "द स्टूडियो आर्नएक्स में आपका स्वागत है। 1995 से, हमारा संकल्प रांची के समुदाय को प्रामाणिक, सौम्य और उच्च गुणवत्ता वाले होम्योपैथिक उपचार प्रदान करना रहा है। हम बेहतरीन प्राकृतिक दवाओं तक पहुंच प्रदान करने और आपके व्यक्तिगत स्वास्थ्य यात्रा का समर्थन करने के लिए विशेषज्ञ परामर्श सत्रों की मेजबानी करने में विश्वास करते हैं।",
       p2: "हम उन अनुभवी परामर्शदाता डॉक्टरों के साथ मिलकर काम करते हैं जो नैदानिक ​​निदान और मूल-कारण होम्योपैथिक उपचार में विशेषज्ञता रखते हैं। समर्पित पेशेवर परामर्श के साथ-साथ एसबीएल (SBL), डॉ. रेकवेग (Dr. Reckeweg), और एडेल (Adel) के शुद्ध, प्रीमियम फॉर्मूलेशन की पेशकश करके, हम आपको समग्र स्वास्थ्य के सुरक्षित, सौम्य और प्रभावी रास्ते खोजने में मदद करते हैं।",
       legacyTitle: "स्थापित विरासत",
       legacyText: "1995 से इस क्षेत्र में कार्यरत",
@@ -387,10 +387,10 @@ export const translations = {
       hotline: "सीधी हेल्पलाइन",
       emailUs: "हमें ईमेल करें",
       addressTitle: "क्लिनिक का पता",
-      addressText: "कंचन होम्योपैथी हॉल, महावीर चौक के पास, प्यादा टोली, अपर बाजार, रांची, झारखंड 834001"
+      addressText: "द स्टूडियो आर्नएक्स, महावीर चौक के पास, प्यादा टोली, अपर बाजार, रांची, झारखंड 834001"
     },
     footer: {
-      rights: "© {year} कंचन होम्योपैथी हॉल, रांची। सर्वाधिकार सुरक्षित।",
+      rights: "© {year} द स्टूडियो आर्नएक्स, रांची। सर्वाधिकार सुरक्षित।",
       contact: "संपर्क करें"
     },
     forms: {
@@ -499,7 +499,7 @@ export const translations = {
       slipTitle: "आधिकारिक अपॉइंटमेंट पर्ची",
       token: "टोकन नंबर",
       clinic: "क्लिनिक का नाम",
-      clinicVal: "कंचन होम्योपैथी हॉल, रांची",
+      clinicVal: "द स्टूडियो आर्नएक्स, रांची",
       patient: "मरीज",
       date: "अपॉइंटमेंट की तिथि",
       slot: "निर्धारित समय",
