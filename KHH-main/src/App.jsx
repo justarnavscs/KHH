@@ -81,7 +81,7 @@ export default function App() {
             <div className="max-w-3xl space-y-6 text-lg leading-8 text-[#68645e]">
               <p>I’m Arnav Agarwal. I’m curious about how technology works, how businesses grow, and how thoughtful ideas become useful products. I use this portfolio to document my journey as I learn and build.</p>
               <p>My interests span software development, cybersecurity, entrepreneurship, and eBook writing. I enjoy solving problems, exploring new tools, researching unfamiliar subjects, and turning what I learn into practical work.</p>
-              <p>This is my personal portfolio — not a business or clinic website. It brings together my interests, learning journey, creative work, and future projects.</p>
+              <p>This portfolio brings together my interests, learning journey, creative work, and the projects I build along the way.</p>
             </div>
           </div>
         </section>
