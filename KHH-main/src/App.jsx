@@ -1208,7 +1208,7 @@ export default function App() {
 
         </div>
         <div className="max-w-7xl mx-auto px-6 mt-8 pt-5 border-t border-rule">
-          <p className="font-display text-xs font-bold text-ink-muted">Built and Maintained By : Vikhyat Gupta</p>
+          <p className="font-display text-xs font-bold text-ink-muted">Built and Run by Arnav Agarwal</p>
         </div>
       </footer>
 
