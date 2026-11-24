@@ -137,13 +137,13 @@ export default function App() {
           descMeta.setAttribute('content', t('seo.bookingsDesc'));
         }
       } else if (activeView === 'track-order') {
-        document.title = language === 'en' ? 'Track Remedies Order - Kanchan Homoeo Hall' : 'दवा ऑर्डर ट्रैक करें - कंचन होम्योपैथी हॉल';
+        document.title = language === 'en' ? 'Track Remedies Order - The Studio ArnX' : 'दवा ऑर्डर ट्रैक करें - द स्टूडियो आर्नएक्स';
         const descMeta = document.querySelector('meta[name="description"]');
         if (descMeta) {
           descMeta.setAttribute('content', language === 'en' ? 'Track status of your remedies order.' : 'अपने होम्योपैथिक दवा वितरण ऑर्डर की स्थिति ट्रैक करें।');
         }
       } else if (activeView === 'admin') {
-        document.title = language === 'en' ? 'Pharmacist Admin Portal - Kanchan Homoeo Hall' : 'फार्मासिस्ट एडमिन पोर्टल - कंचन होम्योपैथी हॉल';
+        document.title = language === 'en' ? 'Pharmacist Admin Portal - The Studio ArnX' : 'फार्मासिस्ट एडमिन पोर्टल - द स्टूडियो आर्नएक्स';
       } else {
         document.title = t('seo.mainTitle');
         const descMeta = document.querySelector('meta[name="description"]');
@@ -248,7 +248,7 @@ export default function App() {
         <div className="intro-overlay">
           <img 
             src="/logo.png" 
-            alt="Kanchan Homoeo Hall Logo" 
+            alt="The Studio ArnX Logo" 
             className="intro-logo" 
           />
         </div>
@@ -263,10 +263,10 @@ export default function App() {
           <div className="language-card panel max-w-md w-full mx-6 p-8 rounded-3xl relative overflow-hidden transition-all text-center">
             <div className="absolute top-0 left-0 right-0 h-2 bg-vial"></div>
             
-            <img src="/logo.png" alt="Kanchan Homoeo Hall" className="w-24 h-24 rounded-full object-cover mx-auto mb-5 shadow-card ring-4 ring-paper-deep" />
+            <img src="/logo.png" alt="The Studio ArnX" className="w-24 h-24 rounded-full object-cover mx-auto mb-5 shadow-card ring-4 ring-paper-deep" />
             
             <h2 className="font-display font-extrabold text-2xl tracking-tight text-[#0E1626] mb-2">
-              KANCHAN <span className="text-[#2A55C7]">HOMOEO HALL</span>
+              THE STUDIO <span className="text-[#2A55C7]">ARNX</span>
             </h2>
             <p className="text-2xs font-semibold text-ink-muted mb-6">
               Homoeopathy and wholesale, Ranchi
@@ -323,10 +323,10 @@ export default function App() {
         <header className="sticky top-0 z-50 bg-white/70 backdrop-blur-md border-b border-[#D3D9E4] transition-all duration-300 shadow-sm relative">
         <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
           <a href="#" className="flex items-center gap-3 group">
-            <img src="/logo.png" alt="Kanchan Homoeo Hall" className="w-11 h-11 rounded-full object-cover shrink-0 shadow-md ring-1 ring-rule transition-transform duration-300 group-hover:-rotate-12 group-hover:scale-105" />
+            <img src="/logo.png" alt="The Studio ArnX" className="w-11 h-11 rounded-full object-cover shrink-0 shadow-md ring-1 ring-rule transition-transform duration-300 group-hover:-rotate-12 group-hover:scale-105" />
             <div className="flex flex-col justify-center">
               <span className="font-display font-extrabold text-xl tracking-tight text-[#0E1626] group-hover:text-[#1B3FA0] transition-colors block whitespace-nowrap leading-none">
-                KANCHAN<span className="text-[#2A55C7]"> HOMOEO HALL</span>
+                THE STUDIO <span className="text-[#2A55C7]">ARNX</span>
               </span>
               <span className="text-2xs font-medium text-ink-muted mt-1 whitespace-nowrap leading-none">
                 Homoeopathy since 1995, Ranchi
@@ -741,7 +741,7 @@ export default function App() {
                   <p className="text-sm font-extrabold text-[#1B3FA0] tracking-wide uppercase flex items-center gap-2">
                     <span>{t('meetOwner.subtitle')}</span>
                     <span className="w-1.5 h-1.5 rounded-full bg-[#1B3FA0]/40"></span>
-                    <span>{t('nav.clinicStatus') === 'Clinic Status:' ? 'Kanchan Homoeo Hall' : 'कंचन होम्योपैथी हॉल'}</span>
+                    <span>{t('nav.clinicStatus') === 'Clinic Status:' ? 'The Studio ArnX' : 'द स्टूडियो आर्नएक्स'}</span>
                   </p>
                 </div>
               </div>
@@ -1101,7 +1101,7 @@ export default function App() {
                   allowFullScreen=""
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
-                  title="Kanchan Homoeo Hall Location Map"
+                  title="The Studio ArnX Location Map"
                 ></iframe>
               </div>
 
