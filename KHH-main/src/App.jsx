@@ -4,6 +4,7 @@ import {
   ArrowUpRight, Code2, ShieldCheck, BookOpen, Lightbulb,
   Terminal, GraduationCap, PenLine, Cpu, Layers3, Menu, X
 } from 'lucide-react';
+import { BrandWatermark, SpinningCoin } from './components/BrandAnimations';
 
 const skills = [
   { icon: Code2, title: 'Programming & Development', text: 'Building useful digital experiences, experimenting with code, and turning ideas into working projects.' },
@@ -23,6 +24,7 @@ export default function App() {
 
   return (
     <div className="min-h-screen bg-[#f5f3ef] text-[#20201f] selection:bg-[#b89b72]/30">
+      <BrandWatermark />
       <header className="sticky top-0 z-50 border-b border-black/10 bg-[#f5f3ef]/90 backdrop-blur-xl">
         <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-6">
           <a href="#home" className="flex items-center gap-3" onClick={() => setMenuOpen(false)}>
@@ -68,7 +70,7 @@ export default function App() {
         )}
       </header>
 
-      <main id="home">
+      <main id="home" className="relative z-10">
         <section className="relative overflow-hidden border-b border-black/10">
           <div className="pointer-events-none absolute -right-24 -top-24 h-[32rem] w-[32rem] rounded-full bg-[#c5a77f]/20 blur-3xl" />
           <div className="mx-auto grid min-h-[680px] max-w-7xl items-center gap-14 px-6 py-24 lg:grid-cols-[1.3fr_.7fr]">
@@ -93,7 +95,7 @@ export default function App() {
               <div className="absolute aspect-square w-full rounded-full border border-[#b89b72]/40" />
               <div className="absolute aspect-[4/5] w-[78%] rotate-[-8deg] rounded-[2rem] border border-black/10 bg-gradient-to-br from-white/80 to-[#d8c3a6]/60 shadow-2xl" />
               <div className="relative flex aspect-[4/5] w-[78%] rotate-[3deg] flex-col items-center justify-center rounded-[2rem] border border-white/70 bg-[#e9dfd1] p-8 text-center shadow-xl">
-                <img src="/logo.png" alt="The Studio ArnX logo" className="mb-8 h-32 w-32 rounded-full object-cover shadow-lg" />
+                <SpinningCoin className="mb-8 h-32 w-32" />
                 <p className="text-xs font-bold uppercase tracking-[.35em] text-[#8d7659]">Logic in every layer</p>
                 <div className="mt-6 h-px w-16 bg-[#b89b72]" />
                 <p className="mt-6 font-serif text-2xl italic text-[#4a433a]">Ideas into impact.</p>
@@ -203,7 +205,7 @@ export default function App() {
         </section>
       </main>
 
-      <footer className="border-t border-black/10 bg-[#252421] px-6 py-10 text-white">
+      <footer className="relative z-10 border-t border-black/10 bg-[#252421] px-6 py-10 text-white">
         <div className="mx-auto flex max-w-7xl flex-col justify-between gap-5 sm:flex-row sm:items-center">
           <div><p className="text-sm font-black uppercase tracking-[.2em]">The Studio ArnX</p><p className="mt-2 text-xs text-white/55">Logic in every layer.</p></div>
           <p className="text-xs text-white/55">Built and Run by Arnav Agarwal</p>
