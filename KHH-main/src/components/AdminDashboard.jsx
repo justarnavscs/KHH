@@ -733,8 +733,8 @@ export default function AdminDashboard({ onLogout }) {
                       <a 
                         href={`https://wa.me/91${order.phone.replace(/[^0-9]/g, '').slice(-10)}?text=${encodeURIComponent(
                           order.total_price && order.total_price !== 'TBD'
-                            ? `Hello ${order.customerName || order.name},\n\nYour retail order request from *Kanchan Homoeo Hall* has been verified!\n\n*Medicines*:\n${order.medicinesList || order.medicines}\n\n*Confirmed MRP Total*: *₹${order.total_price}* (including discount)\n\nWe are preparing your package for dispatch. Thank you! `
-                            : `Hello ${order.customerName || order.name}, regarding your order from Kanchan Homoeo Hall for: ${order.medicinesList || order.medicines}. We wanted to inform you...`
+                            ? `Hello ${order.customerName || order.name},\n\nYour retail order request from *The Studio ArnX* has been verified!\n\n*Medicines*:\n${order.medicinesList || order.medicines}\n\n*Confirmed MRP Total*: *₹${order.total_price}* (including discount)\n\nWe are preparing your package for dispatch. Thank you! `
+                            : `Hello ${order.customerName || order.name}, regarding your order from The Studio ArnX for: ${order.medicinesList || order.medicines}. We wanted to inform you...`
                         )}`} 
                         target="_blank" 
                         rel="noreferrer" 
@@ -829,7 +829,7 @@ export default function AdminDashboard({ onLogout }) {
                       <div className="flex items-center gap-2">
                         <span>{order.phone}</span>
                         {order.phone && (
-                          <a href={`https://wa.me/91${order.phone.replace(/[^0-9]/g, '').slice(-10)}?text=${encodeURIComponent(`Hello ${order.customerName || order.name}, regarding your order from Kanchan Homoeo Hall for: ${order.medicinesList || order.medicines}. We wanted to inform you...`)}`} target="_blank" rel="noreferrer" className="text-emerald-500 hover:text-emerald-400 transition-colors" title="WhatsApp Customer">
+                          <a href={`https://wa.me/91${order.phone.replace(/[^0-9]/g, '').slice(-10)}?text=${encodeURIComponent(`Hello ${order.customerName || order.name}, regarding your order from The Studio ArnX for: ${order.medicinesList || order.medicines}. We wanted to inform you...`)}`} target="_blank" rel="noreferrer" className="text-emerald-500 hover:text-emerald-400 transition-colors" title="WhatsApp Customer">
                             <MessageCircle className="w-3.5 h-3.5" />
                           </a>
                         )}
@@ -881,7 +881,7 @@ export default function AdminDashboard({ onLogout }) {
                         {order.phone && order.total_price && order.total_price !== 'TBD' && (
                           <a 
                             href={`https://wa.me/91${order.phone.replace(/[^0-9]/g, '').slice(-10)}?text=${encodeURIComponent(
-                              `Hello ${order.customerName || order.name},\n\nYour retail order request from *Kanchan Homoeo Hall* has been verified!\n\n*Medicines*:\n${order.medicinesList || order.medicines}\n\n*Confirmed MRP Total*: *₹${order.total_price}* (including discount)\n\nWe are preparing your package for dispatch. Thank you! `
+                              `Hello ${order.customerName || order.name},\n\nYour retail order request from *The Studio ArnX* has been verified!\n\n*Medicines*:\n${order.medicinesList || order.medicines}\n\n*Confirmed MRP Total*: *₹${order.total_price}* (including discount)\n\nWe are preparing your package for dispatch. Thank you! `
                             )}`}
                             target="_blank" 
                             rel="noreferrer" 
@@ -1262,7 +1262,7 @@ export default function AdminDashboard({ onLogout }) {
             </div>
             <div>
               <span className="font-black text-lg tracking-wider text-white uppercase flex items-center gap-2">
-                KHH <span className="text-[#2DD4BF]">{language === 'en' ? 'PHARMACIST PORTAL' : 'फार्मासिस्ट पोर्टल'}</span>
+                ARNX <span className="text-[#2DD4BF]">{language === 'en' ? 'PHARMACIST PORTAL' : 'फार्मासिस्ट पोर्टल'}</span>
               </span>
               <span className="block text-[9px] font-bold uppercase tracking-[0.2em] text-slate-500">
                 {t('portal.adminPortal')}
