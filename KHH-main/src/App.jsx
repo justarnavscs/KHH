@@ -1,7 +1,8 @@
+import { useState } from 'react';
 import { motion } from 'framer-motion';
 import {
   ArrowUpRight, Code2, ShieldCheck, BookOpen, Lightbulb,
-  Terminal, Github, GraduationCap, PenLine, Cpu, Layers3
+  Terminal, GraduationCap, PenLine, Cpu, Layers3, Menu, X
 } from 'lucide-react';
 
 const skills = [
@@ -18,24 +19,53 @@ const focusAreas = [
 ];
 
 export default function App() {
+  const [menuOpen, setMenuOpen] = useState(false);
+
   return (
     <div className="min-h-screen bg-[#f5f3ef] text-[#20201f] selection:bg-[#b89b72]/30">
       <header className="sticky top-0 z-50 border-b border-black/10 bg-[#f5f3ef]/90 backdrop-blur-xl">
         <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-6">
-          <a href="#home" className="flex items-center gap-3">
+          <a href="#home" className="flex items-center gap-3" onClick={() => setMenuOpen(false)}>
             <img src="/logo.png" alt="The Studio ArnX monogram" className="h-11 w-11 rounded-full object-cover" />
             <span className="text-sm font-black uppercase tracking-[0.2em]">The Studio ArnX</span>
           </a>
           <nav className="hidden items-center gap-8 text-sm font-semibold md:flex">
-            <a className="hover:text-[#98764e]" href="#about">About</a>
+            <a className="hover:text-[#98764e]" href="#home">Home</a>
+            <a className="hover:text-[#98764e]" href="#about">About Me</a>
             <a className="hover:text-[#98764e]" href="#expertise">Expertise</a>
-            <a className="hover:text-[#98764e]" href="#work">What I Do</a>
+            <a className="hover:text-[#98764e]" href="#interests">My Interests</a>
+            <a className="hover:text-[#98764e]" href="#projects">Projects</a>
+            <a className="hover:text-[#98764e]" href="#writing">Writing</a>
             <a className="hover:text-[#98764e]" href="#contact">Connect</a>
           </nav>
-          <a href="https://github.com/justarnavscs" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 rounded-full bg-[#252421] px-4 py-2.5 text-xs font-bold text-white transition hover:bg-[#98764e]">
-            <Github size={15} /> GitHub <ArrowUpRight size={14} />
+          <a href="https://github.com/justarnavscs" target="_blank" rel="noreferrer" className="hidden items-center gap-2 rounded-full bg-[#252421] px-4 py-2.5 text-xs font-bold text-white transition hover:bg-[#98764e] sm:inline-flex">
+            <Code2 size={15} /> GitHub <ArrowUpRight size={14} />
           </a>
+          <button
+            type="button"
+            className="flex h-10 w-10 items-center justify-center rounded-full border border-black/10 md:hidden"
+            aria-label={menuOpen ? 'Close navigation' : 'Open navigation'}
+            aria-expanded={menuOpen}
+            onClick={() => setMenuOpen((open) => !open)}
+          >
+            {menuOpen ? <X size={20} /> : <Menu size={20} />}
+          </button>
         </div>
+        {menuOpen && (
+          <nav className="border-t border-black/10 bg-[#f5f3ef] px-6 py-5 md:hidden">
+            <div className="mx-auto flex max-w-7xl flex-col gap-4 text-sm font-bold">
+              {[
+                ['Home', '#home'], ['About Me', '#about'], ['Expertise', '#expertise'],
+                ['My Interests', '#interests'], ['Projects', '#projects'], ['Writing', '#writing'], ['Connect', '#contact']
+              ].map(([label, href]) => (
+                <a key={href} href={href} className="py-1" onClick={() => setMenuOpen(false)}>{label}</a>
+              ))}
+              <a href="https://github.com/justarnavscs" target="_blank" rel="noreferrer" className="inline-flex w-fit items-center gap-2 text-[#98764e]">
+                GitHub <ArrowUpRight size={14} />
+              </a>
+            </div>
+          </nav>
+        )}
       </header>
 
       <main id="home">
@@ -48,14 +78,14 @@ export default function App() {
               </p>
               <h1 className="max-w-4xl text-5xl font-black leading-[1.04] tracking-[-.055em] sm:text-6xl lg:text-7xl">
                 I’m Arnav Agarwal<span className="text-[#a88a65]">.</span><br />
-                <span className="font-serif font-medium italic tracking-[-.04em] text-[#8d7659]">Curious by nature.</span><br />
-                Builder by choice.
+                <span className="font-serif font-medium italic tracking-[-.04em] text-[#8d7659]">Curious by nature.</span>
+                <br />Builder by choice.
               </h1>
               <p className="mt-8 max-w-2xl text-lg leading-8 text-[#68645e]">
-                I’m Arnav Agarwal — a student, aspiring entrepreneur, programmer, cybersecurity enthusiast, and eBook writer. This is my personal portfolio: a space for my ideas, experiments, projects, and the skills I’m building.
+                I’m a student, entrepreneur, programmer, cybersecurity enthusiast, and eBook writer. I enjoy exploring ideas, understanding technology, solving problems, and turning curiosity into meaningful work.
               </p>
               <div className="mt-10 flex flex-wrap gap-4">
-                <a href="#work" className="inline-flex items-center gap-3 rounded-full bg-[#252421] px-7 py-4 text-sm font-bold text-white transition hover:bg-[#98764e]">Explore my work <ArrowUpRight size={17}/></a>
+                <a href="#projects" className="inline-flex items-center gap-3 rounded-full bg-[#252421] px-7 py-4 text-sm font-bold text-white transition hover:bg-[#98764e]">Explore My Work <ArrowUpRight size={17}/></a>
                 <a href="#about" className="rounded-full border border-black/20 px-7 py-4 text-sm font-bold transition hover:border-[#98764e] hover:text-[#806342]">Get to know me</a>
               </div>
             </motion.div>
@@ -79,9 +109,8 @@ export default function App() {
               <h2 className="mt-5 text-4xl font-black tracking-tight sm:text-5xl">A student.<br/>A maker.<br/><span className="font-serif font-medium italic text-[#98764e]">A work in progress.</span></h2>
             </div>
             <div className="max-w-3xl space-y-6 text-lg leading-8 text-[#68645e]">
-              <p>I’m Arnav Agarwal. I’m curious about how technology works, how businesses grow, and how thoughtful ideas become useful products. I use this portfolio to document my journey as I learn and build.</p>
-              <p>My interests span software development, cybersecurity, entrepreneurship, and eBook writing. I enjoy solving problems, exploring new tools, researching unfamiliar subjects, and turning what I learn into practical work.</p>
-              <p>This portfolio brings together my interests, learning journey, creative work, and the projects I build along the way.</p>
+              <p>I’m Arnav Agarwal. I’m curious about how technology works, how businesses grow, and how thoughtful ideas become useful products. My journey brings together learning, creativity, programming, entrepreneurship, and writing.</p>
+              <p>I believe in continuous improvement, independent thinking, and learning through experimentation. This website is a space to document my journey and share the things I create.</p>
             </div>
           </div>
         </section>
@@ -105,9 +134,9 @@ export default function App() {
           </div>
         </section>
 
-        <section id="work" className="mx-auto max-w-7xl scroll-mt-24 px-6 py-24">
-          <p className="text-xs font-bold uppercase tracking-[.25em] text-[#98764e]">03 / What I do</p>
-          <h2 className="mt-5 max-w-3xl text-4xl font-black tracking-tight sm:text-5xl">Learning is good.<br/><span className="font-serif font-medium italic text-[#98764e]">Building is better.</span></h2>
+        <section id="interests" className="mx-auto max-w-7xl scroll-mt-24 px-6 py-24">
+          <p className="text-xs font-bold uppercase tracking-[.25em] text-[#98764e]">03 / My Interests</p>
+          <h2 className="mt-5 max-w-3xl text-4xl font-black tracking-tight sm:text-5xl">Always learning.<br/><span className="font-serif font-medium italic text-[#98764e]">Always building.</span></h2>
           <div className="mt-14 grid gap-6 md:grid-cols-3">
             {focusAreas.map(({icon:Icon,title,text},i)=>(
               <article key={title} className="group border-t-2 border-[#b89b72] bg-white/50 p-7 transition hover:bg-white">
@@ -137,12 +166,39 @@ export default function App() {
           </div>
         </section>
 
+        <section id="projects" className="mx-auto max-w-7xl scroll-mt-24 px-6 py-24">
+          <p className="text-xs font-bold uppercase tracking-[.25em] text-[#98764e]">04 / Projects</p>
+          <div className="mt-5 grid items-end gap-8 md:grid-cols-[1fr_auto]">
+            <h2 className="max-w-3xl text-4xl font-black tracking-tight sm:text-5xl">Ideas becoming<br/><span className="font-serif font-medium italic text-[#98764e]">real things.</span></h2>
+            <span className="mb-2 text-xs font-bold uppercase tracking-[.2em] text-[#98764e]">Work in progress</span>
+          </div>
+          <div className="mt-12 rounded-[2rem] border border-dashed border-[#b89b72]/60 bg-white/40 px-8 py-16 text-center">
+            <Layers3 size={38} className="mx-auto text-[#98764e]" />
+            <h3 className="mt-6 text-2xl font-black">Projects are taking shape.</h3>
+            <p className="mx-auto mt-3 max-w-xl text-sm leading-7 text-[#68645e]">New experiments and creations will appear here as they become ready to share.</p>
+          </div>
+        </section>
+
+        <section id="writing" className="scroll-mt-24 border-y border-black/10 bg-[#ece7df] py-24">
+          <div className="mx-auto grid max-w-7xl gap-10 px-6 md:grid-cols-[.75fr_1.25fr] md:items-center">
+            <div>
+              <p className="text-xs font-bold uppercase tracking-[.25em] text-[#98764e]">05 / Writing</p>
+              <h2 className="mt-5 text-4xl font-black tracking-tight sm:text-5xl">Research.<br/><span className="font-serif font-medium italic text-[#98764e]">Structure. Clarity.</span></h2>
+            </div>
+            <div className="rounded-[2rem] border border-black/10 bg-[#f8f6f2] p-8 sm:p-10">
+              <BookOpen size={32} className="text-[#98764e]" />
+              <h3 className="mt-6 text-2xl font-black">Writing projects are coming soon.</h3>
+              <p className="mt-3 max-w-2xl text-sm leading-7 text-[#68645e]">This section will share eBooks, research, and written work as publication details become available. No titles or publications are listed until they are real.</p>
+            </div>
+          </div>
+        </section>
+
         <section id="contact" className="mx-auto max-w-7xl scroll-mt-24 px-6 py-24">
           <div className="rounded-[2rem] border border-[#b89b72]/40 bg-gradient-to-br from-white to-[#e9dfd1] p-9 sm:p-16">
-            <p className="text-xs font-bold uppercase tracking-[.25em] text-[#98764e]">04 / Connect</p>
+            <p className="text-xs font-bold uppercase tracking-[.25em] text-[#98764e]">06 / Connect</p>
             <h2 className="mt-5 max-w-3xl text-4xl font-black tracking-tight sm:text-6xl">Have an idea?<br/><span className="font-serif font-medium italic text-[#98764e]">Let’s make it real.</span></h2>
             <p className="mt-6 max-w-xl text-base leading-8 text-[#68645e]">For conversations about technology, programming, creative ideas, projects, or collaboration, connect with me through GitHub.</p>
-            <a href="https://github.com/justarnavscs" target="_blank" rel="noreferrer" className="mt-9 inline-flex items-center gap-3 rounded-full bg-[#252421] px-7 py-4 text-sm font-bold text-white transition hover:bg-[#98764e]"><Github size={18}/> Find me on GitHub <ArrowUpRight size={16}/></a>
+            <a href="https://github.com/justarnavscs" target="_blank" rel="noreferrer" className="mt-9 inline-flex items-center gap-3 rounded-full bg-[#252421] px-7 py-4 text-sm font-bold text-white transition hover:bg-[#98764e]"><Code2 size={18}/> Find me on GitHub <ArrowUpRight size={16}/></a>
           </div>
         </section>
       </main>

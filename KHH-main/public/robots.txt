@@ -2,6 +2,3 @@
 User-agent: *
 Allow: /
 
-# Host & Sitemap Location
-Host: kanchanhomoeohall.com
-Sitemap: https://kanchanhomoeohall.com/sitemap.xml
