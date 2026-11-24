@@ -1,4 +1,4 @@
-const CACHE = 'studio-arnx-v2'
+const CACHE = 'studio-arnx-v3'
 const SHELL = ['/', '/index.html', '/manifest.webmanifest', '/icons/icon-192.png']
 
 self.addEventListener('install', (e) => {
@@ -13,7 +13,6 @@ self.addEventListener('activate', (e) => {
   )
 })
 
-// Same-origin GETs only. /api and every cross-origin call (Firebase, Sheets) go straight to the network.
 self.addEventListener('fetch', (e) => {
   const { request } = e
   const url = new URL(request.url)
@@ -23,8 +22,20 @@ self.addEventListener('fetch', (e) => {
     e.respondWith(fetch(request).catch(() => caches.match('/index.html')))
     return
   }
-  // Always fetch logo/brand assets from the network first so updated files replace old cached logos.
-  if (/\\/(logo\\.(png|jpg)|favicon[^/]*|apple-touch-icon\\.png)$/i.test(url.pathname)) {\n    e.respondWith(fetch(request).then((res) => {\n      if (res.ok) caches.open(CACHE).then((c) => c.put(request, res.clone()))\n      return res\n    }).catch(() => caches.match(request)))\n    return\n  }\n\n  e.respondWith(\n    caches.match(request).then((hit) => {
+
+  // Logo and icon files use network-first so replaced brand assets are not stuck in an old cache.
+  if (/\/(logo\.(png|jpg)|favicon[^/]*|apple-touch-icon\.png)$/i.test(url.pathname)) {
+    e.respondWith(
+      fetch(request).then((res) => {
+        if (res.ok) caches.open(CACHE).then((c) => c.put(request, res.clone()))
+        return res
+      }).catch(() => caches.match(request))
+    )
+    return
+  }
+
+  e.respondWith(
+    caches.match(request).then((hit) => {
       const fresh = fetch(request)
         .then((res) => {
           if (res.ok) caches.open(CACHE).then((c) => c.put(request, res.clone()))
