@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { motion } from 'framer-motion';
 import {
   ArrowUpRight, Code2, ShieldCheck, BookOpen, Lightbulb,
-  Terminal, GraduationCap, PenLine, Cpu, Layers3, Menu, X, Github, Instagram, Linkedin, Twitter
+  Terminal, GraduationCap, PenLine, Cpu, Layers3, Menu, X
 } from 'lucide-react';
 import { BrandWatermark, SpinningCoin, StartupIntro } from './components/BrandAnimations';
 import { JARVIS_PROJECT_URL, PUBLISHED_BOOKS, SOCIAL_LINKS } from './config/site';
