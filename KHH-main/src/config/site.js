@@ -2,6 +2,7 @@ export const SITE_URL = 'https://arnite.me';
 export const JARVIS_PROJECT_URL = 'https://arnx.me';
 
 export const SOCIAL_LINKS = [
+  { name: 'LinkedIn', href: 'https://www.linkedin.com/qr/AQCc0MruHHwvhSNoL3GQhpeSKdwWlDvM_B7Ldc6Bi4Nnj_xKA9K_dOYoxnNvWeXl7ySp0KDFjTWwXvzpiw0YPqjtPrYQ_KTyPnA' },
   { name: 'GitHub', href: 'https://github.com/justarnavscs' },
   { name: 'X', href: 'https://x.com/the_studio_arnx' },
   { name: 'Instagram — Studio Arnet', href: 'https://www.instagram.com/studio.arnet/' },
