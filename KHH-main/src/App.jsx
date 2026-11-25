@@ -2,9 +2,10 @@ import { useState } from 'react';
 import { motion } from 'framer-motion';
 import {
   ArrowUpRight, Code2, ShieldCheck, BookOpen, Lightbulb,
-  Terminal, GraduationCap, PenLine, Cpu, Layers3, Menu, X
+  Terminal, GraduationCap, PenLine, Cpu, Layers3, Menu, X, Github, Instagram, Linkedin, Twitter
 } from 'lucide-react';
 import { BrandWatermark, SpinningCoin, StartupIntro } from './components/BrandAnimations';
+import { JARVIS_PROJECT_URL, PUBLISHED_BOOKS, SOCIAL_LINKS } from './config/site';
 
 const skills = [
   { icon: Code2, title: 'Programming & Development', text: 'Building useful digital experiences, experimenting with code, and turning ideas into working projects.' },
@@ -175,10 +176,15 @@ export default function App() {
             <h2 className="max-w-3xl text-4xl font-black tracking-tight sm:text-5xl">Ideas becoming<br/><span className="font-serif font-medium italic text-[#98764e]">real things.</span></h2>
             <span className="mb-2 text-xs font-bold uppercase tracking-[.2em] text-[#98764e]">Work in progress</span>
           </div>
-          <div className="mt-12 rounded-[2rem] border border-dashed border-[#b89b72]/60 bg-white/40 px-8 py-16 text-center">
-            <Layers3 size={38} className="mx-auto text-[#98764e]" />
-            <h3 className="mt-6 text-2xl font-black">Projects are taking shape.</h3>
-            <p className="mx-auto mt-3 max-w-xl text-sm leading-7 text-[#68645e]">New experiments and creations will appear here as they become ready to share.</p>
+          <div className="mt-12 rounded-[2rem] border border-black/10 bg-white/50 p-8 sm:p-10">
+            <div className="flex flex-col justify-between gap-6 md:flex-row md:items-center">
+              <div className="max-w-2xl">
+                <p className="text-xs font-bold uppercase tracking-[.2em] text-[#98764e]">Featured project</p>
+                <h3 className="mt-4 text-2xl font-black">JARVIS I Robot</h3>
+                <p className="mt-3 text-sm leading-7 text-[#68645e]">A larger technology project associated with ArnX.me. Visit its dedicated website for the project’s own information and developments.</p>
+              </div>
+              <a href={JARVIS_PROJECT_URL} target="_blank" rel="noopener noreferrer" className="inline-flex w-fit shrink-0 items-center gap-3 rounded-full bg-[#252421] px-7 py-4 text-sm font-bold text-white transition hover:bg-[#98764e]">Explore ArnX.me <ArrowUpRight size={16}/></a>
+            </div>
           </div>
         </section>
 
@@ -190,8 +196,11 @@ export default function App() {
             </div>
             <div className="rounded-[2rem] border border-black/10 bg-[#f8f6f2] p-8 sm:p-10">
               <BookOpen size={32} className="text-[#98764e]" />
-              <h3 className="mt-6 text-2xl font-black">Writing projects are coming soon.</h3>
-              <p className="mt-3 max-w-2xl text-sm leading-7 text-[#68645e]">This section will share eBooks, research, and written work as publication details become available. No titles or publications are listed until they are real.</p>
+              <h3 className="mt-6 text-2xl font-black">Published books by Arnav Agarwal</h3>
+              <p className="mt-3 max-w-2xl text-sm leading-7 text-[#68645e]">The following titles are listed in my Google Play Books catalogue. Publication links and detailed descriptions will be added when their public listing URLs are available.</p>
+              <ol className="mt-6 grid gap-3 sm:grid-cols-2">
+                {PUBLISHED_BOOKS.map((book, index) => <li key={book} className="flex gap-3 border-b border-black/10 pb-3 text-sm leading-6 text-[#4f4a43]"><span className="font-bold text-[#98764e]">{String(index + 1).padStart(2, '0')}</span><span>{book}</span></li>)}
+              </ol>
             </div>
           </div>
         </section>
@@ -201,14 +210,16 @@ export default function App() {
             <p className="text-xs font-bold uppercase tracking-[.25em] text-[#98764e]">06 / Connect</p>
             <h2 className="mt-5 max-w-3xl text-4xl font-black tracking-tight sm:text-6xl">Have an idea?<br/><span className="font-serif font-medium italic text-[#98764e]">Let’s make it real.</span></h2>
             <p className="mt-6 max-w-xl text-base leading-8 text-[#68645e]">For conversations about technology, programming, creative ideas, projects, or collaboration, connect with me through GitHub.</p>
-            <a href="https://github.com/justarnavscs" target="_blank" rel="noreferrer" className="mt-9 inline-flex items-center gap-3 rounded-full bg-[#252421] px-7 py-4 text-sm font-bold text-white transition hover:bg-[#98764e]"><Code2 size={18}/> Find me on GitHub <ArrowUpRight size={16}/></a>
+            <div className="mt-9 flex flex-wrap gap-3">
+              {SOCIAL_LINKS.map((social) => <a key={social.name} href={social.href} target="_blank" rel="noopener noreferrer" aria-label={social.name} className="inline-flex items-center gap-2 rounded-full bg-[#252421] px-5 py-3 text-xs font-bold text-white transition hover:bg-[#98764e]">{social.name}<ArrowUpRight size={14}/></a>)}
+            </div>
           </div>
         </section>
       </main>
 
       <footer className="relative z-10 border-t border-black/10 bg-[#252421] px-6 py-10 text-white">
         <div className="mx-auto flex max-w-7xl flex-col justify-between gap-5 sm:flex-row sm:items-center">
-          <div><p className="text-sm font-black uppercase tracking-[.2em]">The Studio ArnX</p><p className="mt-2 text-xs text-white/55">Logic in every layer.</p></div>
+          <div><p className="text-sm font-black uppercase tracking-[.2em]">The Studio ArnX</p><p className="mt-2 text-xs text-white/55">Logic in every layer.</p><div className="mt-4 flex flex-wrap gap-4">{SOCIAL_LINKS.map((social) => <a key={social.name} href={social.href} target="_blank" rel="noopener noreferrer" className="text-xs text-white/70 transition hover:text-white">{social.name}</a>)}<a href={JARVIS_PROJECT_URL} target="_blank" rel="noopener noreferrer" className="text-xs text-white/70 transition hover:text-white">JARVIS I Robot</a></div></div>
           <p className="text-xs text-white/55">Built and Run by Arnav Agarwal</p>
         </div>
       </footer>
