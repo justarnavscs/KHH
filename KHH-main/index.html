@@ -12,8 +12,8 @@
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-title" content="The Studio ArnX" />
     <title>Arnav Agarwal | The Studio ArnX — Arnite.me</title>
-    <meta name="description" content="The official portfolio of Arnav Agarwal: student, entrepreneur, programmer, cybersecurity enthusiast and author. Explore The Studio ArnX, published books, creative interests and JARVIS I Robot." />
-    <meta name="keywords" content="Arnav, Arnav Agarwal, ArnX, Arnite, Arnite.me, The Studio ArnX, programmer, student entrepreneur, cybersecurity enthusiast, video editor, graphic designer, social media manager, author" />
+    <meta name="description" content="Explore the official portfolio of Arnav Agarwal, the creator behind The Studio ArnX. Discover his work in programming, cybersecurity, entrepreneurship, creative technology and his ten published book titles, including JARVIS AI: Logic in Every Layer and The HTML Protocol." />
+    <meta name="keywords" content="Arnav Agarwal, The Studio ArnX, ArnX, Arnite, Arnite.me, programmer, student entrepreneur, cybersecurity enthusiast, software development, video editing, graphic design, social media management, author, eBook author, Rewire Your Mind: Brain Wash, JARVIS AI: Logic in Every Layer, The Elite Output Matrix, Bound to Ashes, Sworn to Crowns, The Dopamine of Seduction, AI, The Silicon Generation, The Only Protocol, The Universal Ledger, The HTML Protocol, The Synch Protocol: The Echo Bureau" />
     <meta name="author" content="Arnav Agarwal" />
     <meta name="robots" content="index, follow, max-image-preview:large" />
     <meta property="og:type" content="website" />
@@ -60,6 +60,34 @@
         "name": "The Studio ArnX",
         "url": "https://arnite.me/",
         "description": "The personal portfolio and creative technology presence of Arnav Agarwal."
+      }
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "ItemList",
+        "name": "Books by Arnav Agarwal",
+        "description": "Book titles listed in Arnav Agarwal's Google Play Books catalogue.",
+        "itemListElement": [
+          "Rewire Your Mind: Brain Wash",
+          "JARVIS AI: Logic in Every Layer",
+          "The Elite Output Matrix",
+          "Bound to Ashes, Sworn to Crowns",
+          "The Dopamine of Seduction",
+          "AI, The Silicon Generation",
+          "The Only Protocol",
+          "The Universal Ledger",
+          "The HTML Protocol",
+          "The Synch Protocol: The Echo Bureau"
+        ].map((name, index) => ({
+          "@type": "ListItem",
+          "position": index + 1,
+          "item": {
+            "@type": "Book",
+            "name": name,
+            "author": { "@type": "Person", "name": "Arnav Agarwal" }
+          }
+        }))
       }
     </script>
   </head>
