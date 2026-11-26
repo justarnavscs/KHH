@@ -1,6 +1,6 @@
 export const SITE_CONFIG = {
-  siteUrl: 'https://khh-weld.vercel.app',
-  projectUrl: 'https://ArnX.me',
+  siteUrl: 'https://arnite.me',
+  projectUrl: 'https://arnx.me',
   name: 'The Studio ArnX',
   tagline: 'Logic in every layer',
   personName: 'Arnav Agarwal',
@@ -14,7 +14,7 @@ export const SOCIAL_LINKS = {
   instagramStudio: { label: 'The Studio ArnX on Instagram', url: 'https://www.instagram.com/studio.arnet/' },
   instagramArnav: { label: 'Arnav Agarwal on Instagram', url: 'https://www.instagram.com/just_arnav_19/' },
   // Set this only after confirming the destination from the business card QR code.
-  linkedin: { label: 'LinkedIn', url: '' },
+  linkedin: { label: 'LinkedIn', url: 'https://www.linkedin.com/qr/AQCc0MruHHwvhSNoL3GQhpeSKdwWlDvM_B7Ldc6Bi4Nnj_xKA9K_dOYoxnNvWeXl7ySp0KDFjTWwXvzpiw0YPqjtPrYQ_KTyPnA' },
 };
 
 export const PUBLISHED_BOOKS = [

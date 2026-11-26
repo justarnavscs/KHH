@@ -300,7 +300,7 @@ export default function App() {
 
       <footer className="relative z-10 border-t border-black/10 bg-[#252421] px-6 py-10 text-white">
         <div className="mx-auto flex max-w-7xl flex-col justify-between gap-5 sm:flex-row sm:items-center">
-          <div><p className="text-sm font-black uppercase tracking-[.2em]">The Studio ArnX</p><p className="mt-2 text-xs text-white/55">Logic in every layer.</p><SocialLinks className="mt-4 text-white" /></div>
+          <div><p className="text-sm font-black uppercase tracking-[.2em]">The Studio ArnX</p><p className="mt-2 text-xs text-white/55">Logic in every layer.</p><SocialLinks className="mt-4 text-white" /><a href={SITE_CONFIG.projectUrl} target="_blank" rel="noopener noreferrer" className="mt-3 inline-block text-xs text-white/70 transition hover:text-white">JARVIS I Robot</a></div>
           <p className="text-xs text-white/55">Built and Run by Arnav Agarwal</p>
         </div>
       </footer>
