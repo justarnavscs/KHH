@@ -5,6 +5,8 @@ import {
   Terminal, GraduationCap, PenLine, Cpu, Layers3, Menu, X
 } from 'lucide-react';
 import { BrandWatermark, SpinningCoin, StartupIntro } from './components/BrandAnimations';
+import SocialLinks from './components/SocialLinks';
+import { PUBLISHED_BOOKS, SITE_CONFIG, SOCIAL_LINKS } from './config/site';
 
 const skills = [
   { icon: Code2, title: 'Programming & Development', text: 'Building useful digital experiences, experimenting with code, and turning ideas into working projects.' },
@@ -29,7 +31,7 @@ export default function App() {
       <header className="sticky top-0 z-50 border-b border-black/10 bg-[#f5f3ef]/90 backdrop-blur-xl">
         <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-6">
           <a href="#home" className="flex items-center gap-3" onClick={() => setMenuOpen(false)}>
-            <img src="/logo.png" alt="The Studio ArnX monogram" className="h-11 w-11 rounded-full object-cover" />
+            <img src="/logo.png" alt="The Studio ArnX logo" width="1024" height="1024" className="h-11 w-11 rounded-full object-cover" />
             <span className="text-sm font-black uppercase tracking-[0.2em]">The Studio ArnX</span>
           </a>
           <nav className="hidden items-center gap-8 text-sm font-semibold md:flex">
@@ -41,7 +43,7 @@ export default function App() {
             <a className="hover:text-[#98764e]" href="#writing">Writing</a>
             <a className="hover:text-[#98764e]" href="#contact">Connect</a>
           </nav>
-          <a href="https://github.com/justarnavscs" target="_blank" rel="noreferrer" className="hidden items-center gap-2 rounded-full bg-[#252421] px-4 py-2.5 text-xs font-bold text-white transition hover:bg-[#98764e] sm:inline-flex">
+          <a href={SOCIAL_LINKS.github.url} target="_blank" rel="noopener noreferrer" className="hidden items-center gap-2 rounded-full bg-[#252421] px-4 py-2.5 text-xs font-bold text-white transition hover:bg-[#98764e] sm:inline-flex">
             <Code2 size={15} /> GitHub <ArrowUpRight size={14} />
           </a>
           <button
@@ -63,7 +65,7 @@ export default function App() {
               ].map(([label, href]) => (
                 <a key={href} href={href} className="py-1" onClick={() => setMenuOpen(false)}>{label}</a>
               ))}
-              <a href="https://github.com/justarnavscs" target="_blank" rel="noreferrer" className="inline-flex w-fit items-center gap-2 text-[#98764e]">
+              <a href={SOCIAL_LINKS.github.url} target="_blank" rel="noopener noreferrer" className="inline-flex w-fit items-center gap-2 text-[#98764e]">
                 GitHub <ArrowUpRight size={14} />
               </a>
             </div>
@@ -112,8 +114,12 @@ export default function App() {
               <h2 className="mt-5 text-4xl font-black tracking-tight sm:text-5xl">A student.<br/>A maker.<br/><span className="font-serif font-medium italic text-[#98764e]">A work in progress.</span></h2>
             </div>
             <div className="max-w-3xl space-y-6 text-lg leading-8 text-[#68645e]">
-              <p>I’m Arnav Agarwal. I’m curious about how technology works, how businesses grow, and how thoughtful ideas become useful products. My journey brings together learning, creativity, programming, entrepreneurship, and writing.</p>
-              <p>I believe in continuous improvement, independent thinking, and learning through experimentation. This website is a space to document my journey and share the things I create.</p>
+              <p>I’m Arnav Agarwal, a student at {SITE_CONFIG.school}. I’m curious about how technology works, how businesses grow, and how thoughtful ideas become useful products. The Studio ArnX is my personal portfolio for sharing that learning journey.</p>
+              <p>My interests include programming, entrepreneurship, cybersecurity, artificial intelligence, video editing, graphic design, social media, research, writing, eBook publishing, and digital product development. I learn through experimentation and share work as it becomes ready.</p>
+              <div className="pt-2">
+                <p className="mb-3 text-xs font-bold uppercase tracking-[.2em] text-[#98764e]">Find me online</p>
+                <SocialLinks className="text-[#252421]" />
+              </div>
             </div>
           </div>
         </section>
@@ -175,11 +181,19 @@ export default function App() {
             <h2 className="max-w-3xl text-4xl font-black tracking-tight sm:text-5xl">Ideas becoming<br/><span className="font-serif font-medium italic text-[#98764e]">real things.</span></h2>
             <span className="mb-2 text-xs font-bold uppercase tracking-[.2em] text-[#98764e]">Work in progress</span>
           </div>
-          <div className="mt-12 rounded-[2rem] border border-dashed border-[#b89b72]/60 bg-white/40 px-8 py-16 text-center">
-            <Layers3 size={38} className="mx-auto text-[#98764e]" />
-            <h3 className="mt-6 text-2xl font-black">Projects are taking shape.</h3>
-            <p className="mx-auto mt-3 max-w-xl text-sm leading-7 text-[#68645e]">New experiments and creations will appear here as they become ready to share.</p>
-          </div>
+          <article className="mt-12 rounded-[2rem] border border-black/10 bg-white/50 p-8 sm:p-12">
+            <div className="flex flex-col justify-between gap-6 md:flex-row md:items-center">
+              <div className="max-w-3xl">
+                <p className="text-xs font-bold uppercase tracking-[.2em] text-[#98764e]">Featured project</p>
+                <h3 className="mt-4 text-2xl font-black">JARVIS I Robot</h3>
+                <p className="mt-3 text-sm leading-7 text-[#68645e]">ArnX.me is the dedicated destination for the larger JARVIS I Robot project. The Studio ArnX remains Arnav Agarwal’s personal portfolio; visit the project site for its own identity and details.</p>
+              </div>
+              <a href={SITE_CONFIG.projectUrl} target="_blank" rel="noopener noreferrer" className="inline-flex w-fit shrink-0 items-center gap-3 rounded-full bg-[#252421] px-7 py-4 text-sm font-bold text-white transition hover:bg-[#98764e]">
+                Explore JARVIS I Robot <ArrowUpRight size={16} aria-hidden="true" />
+              </a>
+            </div>
+            <p className="mt-5 text-xs text-[#68645e]">Project destination: <a className="font-semibold text-[#806342] underline underline-offset-4" href={SITE_CONFIG.projectUrl} target="_blank" rel="noopener noreferrer">ArnX.me</a></p>
+          </article>
         </section>
 
         <section id="writing" className="scroll-mt-24 border-y border-black/10 bg-[#ece7df] py-24">
@@ -190,9 +204,84 @@ export default function App() {
             </div>
             <div className="rounded-[2rem] border border-black/10 bg-[#f8f6f2] p-8 sm:p-10">
               <BookOpen size={32} className="text-[#98764e]" />
-              <h3 className="mt-6 text-2xl font-black">Writing projects are coming soon.</h3>
-              <p className="mt-3 max-w-2xl text-sm leading-7 text-[#68645e]">This section will share eBooks, research, and written work as publication details become available. No titles or publications are listed until they are real.</p>
+              <h3 className="mt-6 text-2xl font-black">Published works</h3>
+              <p className="mt-3 max-w-2xl text-sm leading-7 text-[#68645e]">Books listed in Arnav Agarwal’s Google Play Books Partner Center catalogue. Publication links are added only when their individual destinations are verified.</p>
+              <ul className="mt-7 grid gap-x-8 gap-y-3 sm:grid-cols-2">
+                {PUBLISHED_BOOKS.map(({ title, publicationUrl }) => (
+                  <li key={title} className="border-t border-black/10 pt-3 text-sm leading-6 text-[#4a433a]">
+                    {publicationUrl ? (
+                      <a href={publicationUrl} target="_blank" rel="noopener noreferrer" className="font-semibold underline decoration-[#b89b72] underline-offset-4 hover:text-[#806342]">{title}</a>
+                    ) : (
+                      <span className="font-semibold">{title}</span>
+                    )}
+                    <span className="block text-xs text-[#68645e]">By Arnav Agarwal</span>
+                  </li>
+                ))}
+              </ul>
             </div>
+          </div>
+        </section>
+
+        <section id="faq" className="mx-auto max-w-7xl scroll-mt-24 px-6 py-24">
+          <p className="text-xs font-bold uppercase tracking-[.25em] text-[#98764e]">Answers</p>
+          <h2 className="mt-5 max-w-3xl text-4xl font-black tracking-tight sm:text-5xl">About Arnav<br/><span className="font-serif font-medium italic text-[#98764e]">and The Studio ArnX.</span></h2>
+          <div className="mt-10 divide-y divide-black/10 border-y border-black/10">
+            <details className="group py-5">
+              <summary className="cursor-pointer text-lg font-extrabold">Who is Arnav Agarwal?</summary>
+              <p className="mt-3 max-w-3xl text-sm leading-7 text-[#68645e]">Arnav Agarwal is a student, young entrepreneur, programmer, and technology enthusiast from Ranchi, India. He studies at {SITE_CONFIG.school} and is interested in software, cybersecurity, AI, creative production, and writing.</p>
+            </details>
+            <details className="group py-5">
+              <summary className="cursor-pointer text-lg font-extrabold">What is The Studio ArnX?</summary>
+              <p className="mt-3 max-w-3xl text-sm leading-7 text-[#68645e]">The Studio ArnX is Arnav Agarwal’s personal portfolio and creative technology brand, where he shares his interests, projects, and writing. Its tagline is “{SITE_CONFIG.tagline}.”</p>
+            </details>
+            <details className="group py-5">
+              <summary className="cursor-pointer text-lg font-extrabold">What does ArnX stand for?</summary>
+              <p className="mt-3 max-w-3xl text-sm leading-7 text-[#68645e]">ArnX is the official spelling of the brand name. No further expansion of the name has been provided.</p>
+            </details>
+            <details className="group py-5">
+              <summary className="cursor-pointer text-lg font-extrabold">What does “Logic in every layer” mean?</summary>
+              <p className="mt-3 max-w-3xl text-sm leading-7 text-[#68645e]">It is The Studio ArnX’s tagline, expressing an interest in thoughtful reasoning throughout technology and creative work.</p>
+            </details>
+            <details className="group py-5">
+              <summary className="cursor-pointer text-lg font-extrabold">What does Arnav Agarwal do?</summary>
+              <p className="mt-3 max-w-3xl text-sm leading-7 text-[#68645e]">Arnav is a student who programs, explores entrepreneurial ideas, and develops interests in cybersecurity, AI, video editing, graphic design, social media, research, writing, and digital products.</p>
+            </details>
+            <details className="group py-5">
+              <summary className="cursor-pointer text-lg font-extrabold">What are Arnav Agarwal’s areas of interest?</summary>
+              <p className="mt-3 max-w-3xl text-sm leading-7 text-[#68645e]">His interests include software development, entrepreneurship, cybersecurity and information security, artificial intelligence, video editing, graphic design, social media management, research, writing, eBook publishing, and digital product development.</p>
+            </details>
+            <details className="group py-5">
+              <summary className="cursor-pointer text-lg font-extrabold">Is Arnav Agarwal a programmer?</summary>
+              <p className="mt-3 max-w-3xl text-sm leading-7 text-[#68645e]">Yes. Arnav identifies as a programmer and is learning and building through personal projects. His public code profile is on <a className="font-semibold text-[#806342] underline underline-offset-4" href={SOCIAL_LINKS.github.url} target="_blank" rel="noopener noreferrer">GitHub</a>.</p>
+            </details>
+            <details className="group py-5">
+              <summary className="cursor-pointer text-lg font-extrabold">What is Arnav’s connection to cybersecurity?</summary>
+              <p className="mt-3 max-w-3xl text-sm leading-7 text-[#68645e]">He is a cybersecurity enthusiast interested in security concepts, information security, and safer software practices. This portfolio does not claim professional certification or employment in cybersecurity.</p>
+            </details>
+            <details className="group py-5">
+              <summary className="cursor-pointer text-lg font-extrabold">What is JARVIS I Robot?</summary>
+              <p className="mt-3 max-w-3xl text-sm leading-7 text-[#68645e]">JARVIS I Robot is a larger project associated with Arnav Agarwal and The Studio ArnX. Its dedicated project destination is <a className="font-semibold text-[#806342] underline underline-offset-4" href={SITE_CONFIG.projectUrl} target="_blank" rel="noopener noreferrer">ArnX.me</a>; further project details are available there.</p>
+            </details>
+            <details className="group py-5">
+              <summary className="cursor-pointer text-lg font-extrabold">What is ArnX.me?</summary>
+              <p className="mt-3 max-w-3xl text-sm leading-7 text-[#68645e]">ArnX.me is the dedicated destination for the JARVIS I Robot project. It is connected to, but distinct from, The Studio ArnX personal portfolio.</p>
+            </details>
+            <details className="group py-5">
+              <summary className="cursor-pointer text-lg font-extrabold">Where can I find Arnav’s programming projects?</summary>
+              <p className="mt-3 max-w-3xl text-sm leading-7 text-[#68645e]">Visit Arnav’s <a className="font-semibold text-[#806342] underline underline-offset-4" href={SOCIAL_LINKS.github.url} target="_blank" rel="noopener noreferrer">GitHub profile</a> for code and programming projects.</p>
+            </details>
+            <details className="group py-5">
+              <summary className="cursor-pointer text-lg font-extrabold">Where can I find Arnav’s published books?</summary>
+              <p className="mt-3 max-w-3xl text-sm leading-7 text-[#68645e]">The titles currently listed in the <a className="font-semibold text-[#806342] underline underline-offset-4" href="#writing">Published Works section</a> are from the author catalogue information provided. Individual publication links are not yet verified or configured.</p>
+            </details>
+            <details className="group py-5">
+              <summary className="cursor-pointer text-lg font-extrabold">How can I contact Arnav Agarwal?</summary>
+              <p className="mt-3 max-w-3xl text-sm leading-7 text-[#68645e]">Use the verified social profiles in the Connect section to reach out about programming, technology, creative ideas, or projects.</p>
+            </details>
+            <details className="group py-5">
+              <summary className="cursor-pointer text-lg font-extrabold">What is Arnav’s connection to The Studio ArnX?</summary>
+              <p className="mt-3 max-w-3xl text-sm leading-7 text-[#68645e]">Arnav Agarwal is the person behind The Studio ArnX, his personal portfolio and brand. The site documents his learning, interests, and work as they develop.</p>
+            </details>
           </div>
         </section>
 
@@ -200,15 +289,18 @@ export default function App() {
           <div className="rounded-[2rem] border border-[#b89b72]/40 bg-gradient-to-br from-white to-[#e9dfd1] p-9 sm:p-16">
             <p className="text-xs font-bold uppercase tracking-[.25em] text-[#98764e]">06 / Connect</p>
             <h2 className="mt-5 max-w-3xl text-4xl font-black tracking-tight sm:text-6xl">Have an idea?<br/><span className="font-serif font-medium italic text-[#98764e]">Let’s make it real.</span></h2>
-            <p className="mt-6 max-w-xl text-base leading-8 text-[#68645e]">For conversations about technology, programming, creative ideas, projects, or collaboration, connect with me through GitHub.</p>
-            <a href="https://github.com/justarnavscs" target="_blank" rel="noreferrer" className="mt-9 inline-flex items-center gap-3 rounded-full bg-[#252421] px-7 py-4 text-sm font-bold text-white transition hover:bg-[#98764e]"><Code2 size={18}/> Find me on GitHub <ArrowUpRight size={16}/></a>
+            <p className="mt-6 max-w-xl text-base leading-8 text-[#68645e]">For conversations about technology, programming, creative ideas, or projects, connect with me through my social profiles.</p>
+            <a href={SOCIAL_LINKS.github.url} target="_blank" rel="noopener noreferrer" className="mt-9 inline-flex items-center gap-3 rounded-full bg-[#252421] px-7 py-4 text-sm font-bold text-white transition hover:bg-[#98764e]"><Code2 size={18}/> Find me on GitHub <ArrowUpRight size={16}/></a>
+            <div className="mt-7">
+              <SocialLinks className="text-[#252421]" />
+            </div>
           </div>
         </section>
       </main>
 
       <footer className="relative z-10 border-t border-black/10 bg-[#252421] px-6 py-10 text-white">
         <div className="mx-auto flex max-w-7xl flex-col justify-between gap-5 sm:flex-row sm:items-center">
-          <div><p className="text-sm font-black uppercase tracking-[.2em]">The Studio ArnX</p><p className="mt-2 text-xs text-white/55">Logic in every layer.</p></div>
+          <div><p className="text-sm font-black uppercase tracking-[.2em]">The Studio ArnX</p><p className="mt-2 text-xs text-white/55">Logic in every layer.</p><SocialLinks className="mt-4 text-white" /></div>
           <p className="text-xs text-white/55">Built and Run by Arnav Agarwal</p>
         </div>
       </footer>
